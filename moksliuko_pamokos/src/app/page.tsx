@@ -9,7 +9,8 @@ export default function HomePage() {
 
   useEffect(() => {
     const p = loadProgress();
-    setCompleted(p.completedLessonIds.length);
+    setCompleted((p.completedLessonIds ?? []).length);
+
   }, []);
 
   return (
